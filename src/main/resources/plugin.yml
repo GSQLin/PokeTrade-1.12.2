@@ -1,0 +1,39 @@
+name: PokeTrade
+main: ${group}
+version: ${version}
+commands:
+  poketrade:
+    aliases: [poket,ptrade]
+depend:
+  - PlaceholderAPI
+permissions:
+  poketrade.*:
+    description: 所有权限
+    default: op
+    children:
+      - poketrade.use
+      - poketrade.reload
+      - poketrade.nov
+      - poketrade.nopokemons
+      - poketrade.noability
+  poketrade.use:
+    description: 玩家默认使用权限
+    default: true
+    children:
+      - poketrade.help
+      - poketrade.apply
+      - poketrade.blacklist
+  poketrade.help:
+    description: 帮助指令权限
+  poketrade.apply:
+    description: 申请交易与同意交易的权限
+  poketrade.reload:
+    description: 重载权限
+  poketrade.blacklist:
+    description: 黑名单权限
+  poketrade.nopokemons:
+    description: 无视交易精灵限制
+  poketrade.nov:
+    description: 无视交易个体V限制
+  poketrade.noability:
+    description: 无视交易特性限制

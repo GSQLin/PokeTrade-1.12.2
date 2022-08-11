@@ -1,0 +1,84 @@
+Convenient: true #开关shift+右键功能
+NoPokemons: #禁止交易的精灵名字,如果加了别的限制交易的可以直接把那个配置里面的机灵抄过来即可
+  - ''
+NoV: 7 #输入后显示指定V数之上包括指定V数,输入7则不限制,如果服务器有魔改个体请输入你认为最大的数字
+NoAbility: #禁止指定特性交易,如果加了别的限制交易的可以直接把那个配置里面的机灵抄过来即可(可以改英文后在背包中查看)
+  - ''
+Overtime: 15
+Message:
+  Pokemon:
+    Untradeable: '&c该精灵有不可交易标签,已取消选择'
+    NoV: '&c精灵个体V>={NoV}' #本条有变量 {NoV}
+  NoPermissions: '&6你没有权限这样做'
+  OtherNoPermissions: '&6对方没有权限'
+  SZXW: '&6不可以和自己交易'
+  Reload: '&a重载完成~!'
+  NoPlayer: '&6玩家不存在&7(你:为什么!明明我还记得连世界也说他不在吗!?)'
+  RemovePlayer: '&6已将玩家:&a%player_name%&6移出你的黑名单'
+  AddPlayer: '&6已将玩家:&a%player_name%&6添加你的黑名单'
+  NoCommand: '&6我背过指令,你这我不知道,要我告诉你吗?试试/pt help'
+  IsConsole: '&6hi,后台你好,这个指令你不可以用哦~'
+  InBlackList: '&6对方已添加你至他的黑名单内!'
+  Agree: '&3你同意了玩家:§a%player_name%&3的精灵交易申请'
+  Refuse: '&3玩家:&a%player_name%&3同意了你的精灵交易申请'
+  Already: '&6你已经向玩家:&a%player_name%&6发送过精灵交易申请了'
+  Overtime1: '&3你向玩家:&a%player_name%&3发送了精灵交易申请&7(15s后失效)'
+  Overtime2: '&3玩家:&a%player_name%&3向你发送了精灵交易申请&7(15s后失效)'
+  Invalid1: '&6你向玩家:&a%player_name%&6发送的申请失效了'
+  Invalid2: '&6玩家:&a%player_name%&6向你发送的申请失效了'
+  Cancel1: '&6你取消了与玩家:&a%player_name%&6的交易'
+  Cancel2: '&6玩家&a%player_name%&6取消了与你的交易'
+  End: '&6交易完成,交易已结束'
+  InsufficientSpace: '&6你背包不足,多出的已加到垃圾箱&r(使用/poketrade dustbin打开垃圾通&c[服务器关闭后清空,注意垃圾箱空间])'
+  NotDustbin: '§6你没有垃圾箱'
+  ClickDF: '&6这区域你可点不了'
+
+GUI:
+  title: '&7&l[&a&l{PLAYER_NAME}&7&l]<==>[&a&l{PLAYER2_NAME}&7&l]' ##插件变量{PLAYER_NAME}  {PLAYER2_NAME} 只有本插件可以用~
+  PokePhotoItem:
+    name: '&r{pokemon_name}'
+    lore: ##一下就是所有插件自带变量了
+      - '&6昵称:&3{poke_name}'
+      - '&6闪光:{poke_shiny} &6等级:&a{poke_level}'
+      - '&6可否繁殖:{has_key_unbreedable}'
+      - '&6个体值:&a{poke_ivs}'
+      - '&6生命:&a{poke_ivs_hp} &6攻击:&a{poke_ivs_attack}'
+      - '&6防御:&a{poke_ivs_defence} &6速度:&a{poke_ivs_speed}'
+      - '&6特防:&a{poke_ivs_specialDefence} &6特攻:&a{poke_ivs_specialAttack}'
+      - '&6努力值:&a{poke_evs}'
+      - '&6生命:&a{poke_evs_hp} &6攻击:&a{poke_evs_attack}'
+      - '&6防御:&a{poke_evs_defence} &6速度:&a{poke_evs_speed}'
+      - '&6特防:&a{poke_evs_specialDefence} &6特攻:&a{poke_evs_specialAttack}'
+      - '&6特性:&a{poke_ability}'
+    tags: #自定义标签变量
+      has_key_unbreedable: 'unbreedable' #{开启后变量使用标签}
+      list:
+        - 'has_key_unbreedable' #开启变量{has_key_unbreedable}
+  Item: '&6完成交易'
+  Lore:
+    - '&6双方各自需要按一次我哦'
+    - '&6如果对方有欺诈行为,你可以取消准备仔细检擦后在准备'
+    - '&6二次确认'
+  Item1: '&a%player_name%'
+  Lore1:
+    - ''
+  Item2: '&3&l空槽'
+  Lore2:
+    - ''
+  Item3: '&4&l未准备'
+  Lore3:
+    - '&6点击进入&a准备&6状态'
+  Item4: '&a&l已准备'
+  Lore4:
+    - '&6点击返回&4未准备&6状态'
+  Item5: '&7&l分界线'
+  Lore5:
+    - ''
+ItemTrade:
+  GuiTitle: '&6玩家:&a%player_name%&6上传的物品'
+  Button:
+    Material: '54:0' #因为自己技术不好所以如果要用数字id的话也需要填写string
+    Name: '&3上传物品&7(对方点击查看)'
+    Lore:
+      - '&6点击上传物品(在打开界面中放物品)'
+      - '&6如果你不是该方向玩家点开则只能查看~'
